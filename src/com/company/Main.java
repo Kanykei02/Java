@@ -10,7 +10,7 @@ public class Main {
         ballOne.radius = 6;
         ballOne.producerCountry = "Chine";
         System.out.println(ballOne.color + " " + ballOne.price + " " + ballOne.radius + " " + ballOne.producerCountry);
-
+        //Задача А
         Students max = new Students();
         Students lilit = new Students();
         Students dean = new Students();
@@ -31,7 +31,7 @@ public class Main {
         dean.nationality = "American";
 
         System.out.println(max.growth + " " + max.nationality + " " + max.year + " " + max.skinColor + " , " + lilit.skinColor + " " + lilit.year + " " + lilit.nationality + " " + lilit.growth + " , " + dean.growth + " " + dean.nationality + " " + dean.year + " " + dean.skinColor);
-
+        //Задача В
         Supernatural sem = new Supernatural();
         Supernatural castiel = new Supernatural();
         Supernatural charli = new Supernatural();
