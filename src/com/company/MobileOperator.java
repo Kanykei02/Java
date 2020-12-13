@@ -9,8 +9,9 @@ public class MobileOperator {
 
     public MobileOperator(){}
 
-    public MobileOperator(String code, double minutePrice, double smsPrice, double gbPrice) {
+    public MobileOperator(String code, String number, double minutePrice, double smsPrice, double gbPrice) {
         this.code = code;
+        this.number = number;
         this.minutePrice = minutePrice;
         this.smsPrice = smsPrice;
         this.gbPrice = gbPrice;
@@ -23,7 +24,11 @@ public class MobileOperator {
 
     public double sendSms(String code, String number, String smsText) {
         System.out.println("Send sms to (" + code + ") " + number);
-        return getGbPrice(code);
+        return getSmsPrice(code);
+    }
+
+    private double getSmsPrice(String code) {
+        return smsPrice;
     }
 
     public double useInternet(double amount) {
@@ -42,18 +47,22 @@ public class MobileOperator {
     }
 
     public double getInternetPrice(double amount) {
+
         return amount * gbPrice;
     }
 
     public String getCode() {
+
         return code;
     }
 
     public void setCode(String code) {
+
         this.code = code;
     }
 
     public String getNumber() {
+
         return number;
     }
 
@@ -62,10 +71,12 @@ public class MobileOperator {
     }
 
     public double getMinutePrice() {
+
         return minutePrice;
     }
 
     public void setMinutePrice(double minutePrice) {
+
         this.minutePrice = minutePrice;
     }
 
@@ -74,10 +85,12 @@ public class MobileOperator {
     }
 
     public void setSmsPrice(double smsPrice) {
+
         this.smsPrice = smsPrice;
     }
 
     public double getGbPrice() {
+
         return gbPrice;
     }
 
