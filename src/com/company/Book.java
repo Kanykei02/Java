@@ -3,14 +3,14 @@ package com.company;
 import java.time.LocalDate;
 
 public class Book {
-    private String idBook;
-    private String authorOfBook;
-    private String nameOfBook;
-    private LocalDate date;
+    String idBook;
+    String authorOfBook;
+    String nameOfBook;
+    String date;
 
     public Book() {}
 
-    public Book(String idBook, String authorOfBook, String nameOfBook, LocalDate date) {
+    public Book(String idBook, String authorOfBook, String nameOfBook, String date) {
         this.idBook = idBook;
         this.authorOfBook = authorOfBook;
         this.nameOfBook = nameOfBook;
@@ -41,11 +41,11 @@ public class Book {
         this.nameOfBook = nameOfBook;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
     @Override
