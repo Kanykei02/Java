@@ -19,7 +19,7 @@ public class Circle {
         this.radius = radius;
     }
 
-    public  double getCircleArea() {
+    public double getCircleArea() {
         return Math.PI * getRadius() * 2;
     }
 
