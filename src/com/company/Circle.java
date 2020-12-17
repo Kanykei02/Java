@@ -3,7 +3,8 @@ package com.company;
 import java.util.Random;
 
 public class Circle {
-    private double radius;
+    double radius;
+    final double pi = 3.14;
 
     public Circle(){}
 
@@ -20,7 +21,7 @@ public class Circle {
     }
 
     public double getCircleArea() {
-        return Math.PI * getRadius() * 2;
+        return pi * getRadius() * 2;
     }
 
     public static Circle getGenerateCircle() {

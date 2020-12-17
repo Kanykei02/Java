@@ -8,11 +8,11 @@ public class Main {
         int count = 0;
         for (int i = 0; i < circle.length; i++){
             circle[i] = Circle.getGenerateCircle();
-            if (circle1.getCircleArea() % 3 == 0) {
+            if (circle[i].getCircleArea() % 3 == 0) {
                 count++;
-                System.out.print(i + " ");
+                System.out.println(circle[i].getCircleArea());
             }
         }
-        System.out.printf("\n%s", count);
+        System.out.printf("%s", count);
     }
 }
