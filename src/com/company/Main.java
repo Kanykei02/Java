@@ -6,13 +6,26 @@ public class Main {
         WhiteBoard white = new WhiteBoard();
         BlackBoard black = new BlackBoard();
 
-        Board b = new WhiteBoard();
-        Board bl = new BlackBoard();
-        Board wh = new WhiteBoard();
+        AbstractBoard b = new WhiteBoard();
+        AbstractBoard bl = new BlackBoard();
+        AbstractBoard wh = new WhiteBoard();
 
-        Board[] array = {b, bl, wh};
+        AbstractBoard[] array = {b, bl, wh};
 
-        Climbable mon = new Monkey();55
+        Climbable mon = new Monkey();
         mon.climb();
+
+        WhiteBoard whiteBoard = new WhiteBoard();
+        whiteBoard.write();
+
+        Writable blB = new BlackBoard();
+        blB.write();
+
+        Writable[] bb = {whiteBoard, blB};
+        testMe(blB);
+    }
+
+    public static void testMe(Writable board){126
+        board.write();
     }
 }
