@@ -1,4 +1,4 @@
-package com.company;
+package com.company.monkey;
 
 public interface Climbable {
      void climb();

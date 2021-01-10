@@ -1,4 +1,4 @@
-package com.company;
+package com.company.monkey;
 
 public class Monkey implements Climbable{
     @Override

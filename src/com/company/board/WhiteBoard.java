@@ -1,4 +1,4 @@
-package com.company;
+package com.company.board;
 
 public class WhiteBoard extends AbstractBoard {
     @Override
