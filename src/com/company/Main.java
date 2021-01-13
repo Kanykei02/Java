@@ -30,10 +30,13 @@ public class Main {
 
         //Writable[] bb = {whiteBoard, blB};
         //testMe(blB);
-        Turtle turtle = new Turtle();
-        turtle.swim();
-        turtle.shell();
-        turtle.put();
+//        Turtle turtle = new Turtle();
+//        turtle.swim();
+//        turtle.shell();
+//        turtle.put();
+        //30-lesson
+        Swimable swimable = new Turtle();
+        Turtlable turtlable = new Turtle();
     }
 
     //public static void testMe(Writable board){
