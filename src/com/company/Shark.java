@@ -9,4 +9,7 @@ public class Shark implements Swimmable{
     public void makeSound() {
         System.out.println("Shark is silent.");
     }
+    public void hunt() {
+        System.out.println("I'm hunting");
+    }
 }
