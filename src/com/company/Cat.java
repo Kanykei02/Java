@@ -1,39 +1,49 @@
 package com.company;
 
-public class Cat {
-    private String name;
-    private int age;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Cat(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
+public class Cat extends Animal{
+    public Cat(String name, Integer age) {
+        super(name, age);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-    @Override
-    public String toString() {
-        return name + ": " + age;
-    }
     @Override
     public boolean equals(Object obj) {
         if (obj == this) return true;
         else if (obj instanceof Cat)
-        return  (((Cat)obj).getName().equals(this.name) &&
-                ((Cat)obj).getAge() == this.age);
+        return  (((Cat)obj).getName().equals(this.getName()) &&
+                ((Cat)obj).getAge() == this.getAge());
         return false;
+    }
+
+//    public static boolean find(List<Cat> cats, Cat findCat) {
+//        for (Cat cat : cats){
+//            if (cat.equals(findCat)){
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
+    public boolean find(List<Cat> cats) {
+        for (Cat cat : cats){
+            if (cat.equals(this)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static List<Cat> generateCats(String[] names, int size){
+        List<Cat> cats = new ArrayList<>();
+        //Random r = new Random();
+        if (size <= names.length) {
+            for (int i = 1; i <= size; i++) {
+                cats.add(new Cat(names[i - 1], i));
+            }
+        }
+        else return null;
+        return cats;
     }
 }
