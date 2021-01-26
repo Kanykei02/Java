@@ -7,7 +7,7 @@ public class PK extends AbstractComputer{
         this.monitorDiagonal = monitorDiagonal;
     }
 
-    public PK(double price, String model, double discount, int monitorDiagonal) {
+    public PK(double price, Model model, double discount, int monitorDiagonal) {
         super(price, model, discount);
         this.monitorDiagonal = monitorDiagonal;
     }

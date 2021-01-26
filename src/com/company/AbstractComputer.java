@@ -1,15 +1,16 @@
 package com.company;
 
+
 import java.util.List;
 
 public abstract class AbstractComputer {
     private double price;
-    private String model;
+    private Model model;
     private double discount;
 
     public AbstractComputer(){}
 
-    public AbstractComputer(double price, String model, double discount) {
+    public AbstractComputer(double price, Model model, double discount) {
         this.price = price;
         this.model = model;
         this.discount = discount;
@@ -23,11 +24,11 @@ public abstract class AbstractComputer {
         this.price = price;
     }
 
-    public String getModel() {
+    public Model getModel() {
         return model;
     }
 
-    public void setModel(String model) {
+    public void setModel(Model model) {
         this.model = model;
     }
 
@@ -66,4 +67,5 @@ public abstract class AbstractComputer {
         }
         return null;
     }
+
 }

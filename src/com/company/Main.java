@@ -9,8 +9,8 @@ public class Main {
         List<AbstractComputer> computers = new ArrayList<>();
         int discount = 20;
         for (int i = 1; i < 50; i++){
-            computers.add(new Laptop(i * 150, "Dell", discount));
-            computers.add(new PK(i * 100, "ASUS", 0, 23));
+            computers.add(new Laptop(i * 150, Model.Dell, discount));
+            computers.add(new PK(i * 100, Model.Sony, 0, 23));
         }
         System.out.println(computers);
 
@@ -36,7 +36,36 @@ public class Main {
 //                break;
 //            }
 //        }
-        AbstractComputer findComp = new PK(150.0, "Dell", 20, 23);
+        AbstractComputer findComp = new PK(150.0, Model.Dell, 20, 23);
         System.out.println("\nFound: \n" + findComp.find(computers));
+
+        System.out.println("============================================================================");
+
+        Model[] models = Model.values();
+        System.out.println(Model.Lenovo.ordinal());
+
+        System.out.println("================================================================================");
+
+        WeekDay weekDay = WeekDay.Friday;
+        if(weekDay == WeekDay.Monday || weekDay == WeekDay.Wednesday || weekDay == WeekDay.Friday){
+            System.out.println("Учеба в " + weekDay.getRusName());
+        }
+        else {
+            System.out.println("В " + weekDay.getRusName() + " я не учусь");
+        }
+
+        switch (weekDay){
+            case Monday:
+            case Wednesday:
+            case Friday:
+                System.out.println("Учеба в " + weekDay.getRusName());
+            default:
+                System.out.println("В " + weekDay.getRusName() + " я не учусь");
+        }
+
+        WeekDay[] weekDays = WeekDay.values();
+        for (WeekDay wday : weekDays){
+            System.out.println(wday.getRusName());
+        }
     }
 }
