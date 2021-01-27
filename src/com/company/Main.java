@@ -48,5 +48,7 @@ public class Main {
         }
         System.out.println("Apt total: " + aptSum);
         System.out.println("Hotel total: " + hotelSum);
+
+        System.out.println("Task 2______________________");
     }
 }
