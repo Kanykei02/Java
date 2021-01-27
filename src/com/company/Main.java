@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.familu.AbstractHouse;
+import com.company.familu.Apartmant;
+import com.company.familu.Family;
+import com.company.familu.Hotel;
+
 import java.util.ArrayList;
 import java.util.List;
 

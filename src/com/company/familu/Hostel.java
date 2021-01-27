@@ -1,4 +1,4 @@
-package com.company;
+package com.company.familu;
 
 public class Hostel extends AbstractHouse{
     public Hostel(String street, int house) {

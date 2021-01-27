@@ -1,7 +1,7 @@
-package com.company;
+package com.company.familu;
 
-public class Hotel extends AbstractHouse{
-    public Hotel(String street, int house) {
+public class Apartmant extends AbstractHouse{
+    public Apartmant(String street, int house) {
         super(street, house);
     }
 

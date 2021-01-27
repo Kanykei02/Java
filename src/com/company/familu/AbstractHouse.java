@@ -1,4 +1,4 @@
-package com.company;
+package com.company.familu;
 
 public abstract class AbstractHouse {
     private String street;
