@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.List;
-
 public class Person {
     private String surname;
     private String name;
@@ -12,6 +10,17 @@ public class Person {
         this.name = name;
         this.patronymic = patronymic;
     }
+
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj) return true;
+        if (obj instanceof Person)
+            return ((Person) obj).getSurname().equals(this.getSurname()) &&
+                    ((Person) obj).getName().equals(this.getName()) &&
+                    ((Person) obj).getPatronymic().equals(this.getPatronymic());
+        return false;
+    }
+
 
     public String getSurname() {
         return surname;
