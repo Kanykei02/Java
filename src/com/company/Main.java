@@ -22,5 +22,6 @@ public class Main {
         if (people.contains(person)) {
             throw new Exception();
         }
+        people.add(person);
     }
 }
