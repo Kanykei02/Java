@@ -3,6 +3,8 @@ package com.company;
 public class Apple implements Circular{
     private int pc;
 
+    public Apple(){}
+
     public Apple(int pc) {
         this.pc = pc;
     }
