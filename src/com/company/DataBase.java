@@ -3,7 +3,7 @@ package com.company;
 import java.sql.*;
 
 public class DataBase {
-    private static final String url = "jdbc:postgresql://localhost:5432/postgres";
+    private static final String url = "jdbc:postgresql://localhost:5432/";
     private static final String user = "postgres";
     private static final String password = "aikosha02";
 
@@ -25,7 +25,7 @@ public class DataBase {
 
         try (Connection conn = connect();
              Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql);) {
+             ResultSet rs = stmt.executeQuery(sql)) {
 
             rs.next();
             count = rs.getInt(1);
