@@ -8,15 +8,17 @@ public class User {
     private String email;
     private String password;
     private Date dateOfRegistration;
+    private boolean isBlocked;
 
     public User(){}
 
-    public User(int userId, String userName, String email, String password, Date dateOfRegistration) {
+    public User(int userId, String userName, String email, String password, Date dateOfRegistration, boolean isBlocked) {
         this.userId = userId;
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.dateOfRegistration = dateOfRegistration;
+        this.isBlocked = isBlocked;
     }
 
     public int getUserId() {
@@ -57,5 +59,13 @@ public class User {
 
     public void setDateOfRegistration(Date dateOfRegistration) {
         this.dateOfRegistration = dateOfRegistration;
+    }
+
+    public boolean isBlocked() {
+        return isBlocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        isBlocked = blocked;
     }
 }
