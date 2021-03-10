@@ -18,6 +18,14 @@ public class Main {
         }
         System.out.println(map);
 
+        HashMap<String, Car> cars = new HashMap<>();
+        Car mercedes = CarDB.getCarByID(1);
+        cars.put("AB1549Z", mercedes);
+        //System.out.println(cars);
+
+        Car toyoto = CarDB.getCarByID(2);
+        cars.put("I03377Q", toyoto);
+        System.out.println(cars.get("AB1549Z"));
 //        System.out.println(DataBase.connect());
 //        Scanner sc = new Scanner(System.in);
 //        System.out.print("Enter username:");
