@@ -1,8 +1,6 @@
 package com.company;
 
-import java.util.HashMap;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -26,6 +24,27 @@ public class Main {
         Car toyoto = CarDB.getCarByID(2);
         cars.put("I03377Q", toyoto);
         System.out.println(cars.get("AB1549Z"));
+
+        System.out.println("--------------------------------------------------------\n\n");
+
+        //HashMap<String, String> hashMap = new HashMap<>();
+        Map<String, String> hashMap = new HashMap<>();
+        List<String> pens = new ArrayList<>();
+        hashMap.put("President", "Elzin");
+        pens.add(hashMap.put("President", "Putin"));
+        System.out.println(hashMap);
+        System.out.println(pens);
+        hashMap.put("minister", "Medvedev");
+        pens.add(hashMap.put("minister", "Mishustin"));
+        hashMap.put("mayour", "Sobyanin");
+        Set<String> keys = hashMap.keySet();
+        System.out.println(hashMap);
+        System.out.println(keys);
+        keys.remove("mayour");
+        System.out.println(hashMap);
+        System.out.println(keys);
+        System.out.println(pens);
+
 //        System.out.println(DataBase.connect());
 //        Scanner sc = new Scanner(System.in);
 //        System.out.print("Enter username:");
