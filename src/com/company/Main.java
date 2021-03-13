@@ -45,6 +45,12 @@ public class Main {
         System.out.println(keys);
         System.out.println(pens);
 
+        Collection<String> collection = hashMap.values();
+        System.out.println(collection);
+        collection.remove("Mishustin");
+        System.out.println(hashMap);
+        System.out.println(collection);
+
 //        System.out.println(DataBase.connect());
 //        Scanner sc = new Scanner(System.in);
 //        System.out.print("Enter username:");
