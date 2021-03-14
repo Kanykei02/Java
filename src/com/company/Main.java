@@ -51,6 +51,16 @@ public class Main {
         System.out.println(hashMap);
         System.out.println(collection);
 
+        System.out.println("------------------------------\n\n");
+
+        Map<TestClass, Integer> hashs = new HashMap<>();
+        TestClass t1 = new TestClass(1);
+        TestClass t2 = new TestClass(2);
+        hashs.put(new TestClass(1), 1);
+        hashs.put(new TestClass(2), 10);
+        System.out.println(t1.hashCode());
+        System.out.println(t2.hashCode());
+
 //        System.out.println(DataBase.connect());
 //        Scanner sc = new Scanner(System.in);
 //        System.out.print("Enter username:");
@@ -90,4 +100,25 @@ public class Main {
 //            System.out.println("Username or password is incorrect");
 //        }
 //    }
+}
+
+class TestClass{
+    int t;
+
+    public TestClass(int t) {
+        this.t = t;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TestClass testClass = (TestClass) o;
+        return t == testClass.t;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }
