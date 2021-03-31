@@ -14,7 +14,15 @@ public class Main {
         NewGenerics<Integer> integerNewGenerics = new NewGenerics<>(15);
         NewGenerics<String> newGenerics = new NewGenerics<>("Hello!");
 
+        Integer[] intArr = {21, 1, 2,22};
+        String[] strArr = {"Dean", "Cas", "Sam"};
+        System.out.println(getLastElement(intArr));
+        System.out.println(getLastElement(strArr));
+    }
 
+    public static <T> T getLastElement(T[] arr){
+        if(arr.length <= 0) return null;
+        return arr[arr.length - 1];
     }
 }
 
