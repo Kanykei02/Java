@@ -24,5 +24,14 @@ public class Main {
         System.out.println(ivan.getClass());
         System.out.println(petr.getClass());
         System.out.println(sergey.getClass());
+
+        testable haskell = () -> System.out.println("Haskell is being tested");
+        testable alonzo = () -> System.out.println("Alonzo is being tested");
+        haskell.takethetest();
+        alonzo.takethetest();
+
+        Printable printable = (supernatural) -> System.out.println(supernatural);
+        printable.print("I am Dean");
+
     }
 }

@@ -1,5 +1,5 @@
 package com.company;
-
+@FunctionalInterface
 public interface testable {
-    public void takethetest();
+     void takethetest();
 }
