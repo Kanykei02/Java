@@ -10,6 +10,11 @@ public class Main {
         System.out.println((int)intGen.getVal() + 2);
         System.out.println(strGen);
         System.out.println(strGen.getVal() + ", number");
+
+        NewGenerics<Integer> integerNewGenerics = new NewGenerics<>(15);
+        NewGenerics<String> newGenerics = new NewGenerics<>("Hello!");
+
+
     }
 }
 
@@ -27,5 +32,26 @@ class OldGenerics{
 
     public Object getVal() {
         return val;
+    }
+}
+
+class NewGenerics<T>{
+    private T val;
+
+    public NewGenerics(T val) {
+        this.val = val;
+    }
+
+    @Override
+    public String toString() {
+        return " (" + val + ") ";
+    }
+
+    public T getVal() {
+        return val;
+    }
+
+    public void setVal(T val) {
+        this.val = val;
     }
 }
